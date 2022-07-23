@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background: #e3f2fd;
+}
+body .container {
+  width: 850px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 35px 35px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+body .container h2 {
+  font-size: 22px;
+  font-weight: 500;
+}
+body .container .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px 0;
+  min-height: 335px;
+}
+body .container .wrapper .editor-panel {
+  width: 280px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 15px 20px;
+}
+body .container .wrapper .editor-panel .filter .title, body .container .wrapper .editor-panel .rotate .title {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+body .container .wrapper .editor-panel .filter .options, body .container .wrapper .editor-panel .rotate .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body .container .wrapper .editor-panel .filter .options button, body .container .wrapper .editor-panel .rotate .options button {
+  height: 40px;
+  font-size: 14px;
+  color: #6c7570;
+  margin-bottom: 8px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  background: #fff;
+}
+body .container .wrapper .editor-panel .filter .options button:hover, body .container .wrapper .editor-panel .rotate .options button:hover {
+  background-color: #f5f5f5;
+  color: #5372f0;
+}
+body .container .wrapper .editor-panel .filter .slider, body .container .wrapper .editor-panel .rotate .slider {
+  margin-top: 12px;
+}
+body .container .wrapper .editor-panel .filter .slider .filter-info, body .container .wrapper .editor-panel .rotate .slider .filter-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #464646;
+  font-size: 14px;
+}
+body .container .wrapper .editor-panel .filter .slider input, body .container .wrapper .editor-panel .rotate .slider input {
+  width: 100%;
+  height: 5px;
+  accent-color: #5372f0;
+}
+body .container .wrapper .editor-panel .filter .options button {
+  width: calc(50% - 4px);
+}
+body .container .wrapper .editor-panel .filter .options button.active {
+  color: #fff;
+  background: #5372f0;
+  border-color: #5372f0;
+}
+body .container .wrapper .editor-panel .rotate {
+  margin-top: 17px;
+}
+body .container .wrapper .editor-panel .rotate button {
+  width: calc(25% - 3px);
+}
+body .container .wrapper .editor-panel .rotate button:nth-child(3),
+body .container .wrapper .editor-panel .rotate button:nth-child(4) {
+  font-size: 18px;
+}
+body .container .wrapper .preciew-img {
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+body .container .wrapper .preciew-img img {
+  max-width: 490px;
+  max-height: 335px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body .container .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body .container .controls .reset-filter {
+  color: #6c757d;
+  background-color: #fff;
+  border: 1px solid #6c757d;
+}
+body .container .controls button {
+  cursor: pointer;
+  font-size: 14px;
+  padding: 11px 20px;
+  border-radius: 3px;
+  color: #fff;
+  text-transform: uppercase;
+  background: #fff;
+}
+body .container .controls .row .choose-img {
+  border: 1px solid #6c757d;
+  background: #6c757d;
+}
+body .container .controls .row .save-img {
+  margin-left: 5px;
+  background: #5372f0;
+  border: 1px solid #5372f0;
+}
+body .container.disabel :where(.editor-panel, .reset-filter, .save-img) {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 700px) {
+  body .container {
+    padding: 25px;
+  }
+  body .container .wrapper {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+  body .container .wrapper .editor-panel {
+    width: 100%;
+  }
+  body .container .wrapper .preciew-img {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  body .container .controls {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  body .container .controls .row {
+    margin-top: 10px;
+  }
+  body .container .controls .row .save-img {
+    margin-left: 0px;
+  }
+}
